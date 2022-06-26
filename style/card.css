@@ -1,0 +1,274 @@
+:root {
+    /* global */
+    --transitionTime: 0.2s ease-in-out;
+    --transitionTimeLong: 0.5s ease-in-out;
+    --colorWhite: #fff;
+    --colorBlack: #000;
+    --colorBlackFaded: #000000c2;
+    --colorNavy: #232939;
+    --colorHighlightBg: #f37cb7;
+    --colorHighlightBgFaded: #ff1d8e8e;
+    --colorHighlightBgFadedMore: #ff4ba575;
+    --colorHighlightBgTransparent: #f37cb7b7;
+    /* dark */
+    --colorBgDark: #333335;
+    --colorBgDarkFaded: #474749;
+    --colorFgDark: #d1d1d1;
+    --colorFgDarkFaded: #e3e3e363;
+    --colorFgDarkFadedMore: #e1e1e1c7;
+    /* light */
+    --colorBgLight: #eef8fc;
+}
+/* base */
+body {
+    min-height: 100%;
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16pt;
+    min-height: 100vh;
+    color: var(--colorFgDark);
+    text-align: center;
+    background: url('heartsforsitetho.jpg') var(--colorBgDark);
+    background-blend-mode: overlay;
+    background-size: 600px;
+    /* box-shadow: inset 0 -1em 5em 8em var(--colorBlackFaded); */
+}
+span#highlight {color: var(--colorHighlightBg);}
+* {
+    margin: 0;
+    padding: 0;
+}
+a,li {
+    transition-duration: var(--transitionTime);
+}
+a {
+    text-decoration: none;
+    color: var(--colorHighlightBg);
+}
+a:hover {color: var(--colorHighlightBgFaded);}
+ul {list-style-type: none;}
+p {margin: 1em auto;}
+.vinny {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    box-shadow: inset 0 0 250px 100px var(--colorBlack);
+    z-index: -9999;
+}
+/* mobile warning */
+.mobilepls {
+    position: absolute;
+    top: 0;
+    display: none;
+    color: white;
+    background-color: rgb(168, 4, 4);
+    margin: auto 3em;
+    padding: 1em 3em;
+    z-index: 1;
+}
+/* @media only screen and (max-width: 678px) {
+    .mobilepls {
+        display: block;
+    }
+} */
+/* center it! */
+.metawrap {
+    display: inline-block;
+    margin: auto;
+    align-items: center;
+    border-radius: 100%;
+}
+/* banner */
+.facewrap {
+    margin: auto;
+    padding: 0 2em;
+    text-align: center;
+    background-color: var(--colorHighlightBgTransparent);
+    border-radius: 3em 3em 0 0;
+    box-shadow: 0 -2px 9px var(--colorBgDarkFaded);
+}
+img#name,img#face {
+    clear: both;
+    vertical-align: middle;
+    filter: drop-shadow(0 1px 2px var(--colorBlack));
+}
+img#name {
+    margin-top: 2em;
+    width: 100%;
+    padding-top: 1em;
+}
+img#face {
+    width: 10em;
+    border-radius: 100%;
+    vertical-align: middle;
+    transition: var(--transitionTimeLong);
+}
+img#face:hover {
+    border-radius: 20%;
+    transition: var(--transitionTime);
+}
+/* navigation menu */
+/* if nav display: block */
+.nav {display: none;}
+/* .nav {
+    background-color: var(--colorBgDarkFaded);
+    box-shadow: 0 2px 6px var(--colorBgDarkFaded);
+}
+.nav a:hover {color: var(--colorHighlightBg);}
+.nav ul li {
+    padding: 0.86em 2em 1em;
+    margin: -6px;
+    line-height: 3em;
+    display: inline;
+    transition: var(--transitionTime);
+}
+.nav ul li:hover {
+    cursor: pointer;
+    color: var(--colorWhite);
+    background-color: var(--colorBgDark);
+    transition: var(--transitionTime);
+} */
+/* pages */
+.box {
+    margin: auto;
+    width: 28em;
+    min-height: 100px;
+    background: var(--colorBgDark);
+    border-radius: 0 0 3em 3em;
+    box-shadow: 0 2px 6px var(--colorBgDarkFaded);
+    padding: 1em 5em 1em;
+}
+/* if nav then uncomment */
+/* #content:not(:target),#social:not(:target),
+#fun:not(:target),#bio:not(:target),
+#games:not(:target) {
+    height: 1px;
+    opacity: 0%;
+}
+#content:not(:target) img,#social:not(:target) img,
+#fun:not(:target) img,#bio:not(:target) img,
+#games:not(:target) img {
+    display: none;
+} */
+.box ul li {
+    display: inline-block;
+    margin: 0 1em;
+}
+.box #icons {
+    width: 4em;
+    vertical-align: middle;
+    filter: grayscale(100%);
+    transition: var(--transitionTime);
+}
+.box #icons:hover {
+    filter: grayscale(1%);
+    transition: var(--transitionTime);
+}
+.box #sep:after {
+    content: '';
+    padding: 1em;
+}
+.box #sep span {display:none;}
+/* if nav then display: block */
+.box #games {display: none;}
+/* if nav then uncomment */
+/* .box #games {margin: auto;width: 40%;}
+.box #games ul,.box #games ul li {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+:target {
+    animation: paging 1s ease-in-out;
+}
+@keyframes paging {
+    0% {
+        height: 1px;
+        opacity: 0%;
+        display: none;
+    }
+    100% {
+        height: 100px;
+        opacity: 100%;
+    }
+} */
+/* mobile */
+@media only screen and (max-width: 1432px) {
+    .metawrap {max-width: 70vw;}
+    .box {width: auto;}
+}
+@media only screen and (max-width: 1312px) {
+    img#face,img#name {margin: 0;}
+    img#face {
+        right: initial;
+        margin: 1em 0 -2em;
+    }
+}
+@media only screen and (max-width: 1050px) {
+    .box {padding: 1em 0 3em;}
+    #fun,#fun ul,#games,#games ul,#games ul li {
+        width: 100% !important;
+    }
+}
+@media only screen and (max-width: 940px) {
+    img#face {width: 9em;}
+    img#name {width: 25em;}
+}
+@media only screen and (max-width: 870px) {
+    .box {padding: 3em 0 3em;}
+}
+@media only screen and (max-width: 800px) {
+    .facewrap {background-color: var(--colorHighlightBg);}
+    img#face {float: initial;}
+    img#name {display: none;}
+    /* if nav uncomment */
+    /* .nav {display: none;}
+    #content:not(:target),#social:not(:target),
+    #fun:not(:target),#bio:not(:target),
+    #games:not(:target) {
+        height: 100px;
+        opacity: 100%;
+    }
+    #fun:not(:target) img,#bio:not(:target) img,
+    #content:not(:target) img,#social:not(:target) img,
+    #games:not(:target) img {
+        display: block;
+    }
+    #games {display: none;} */
+    .vinny {display: none;}
+}
+@media only screen and (max-width: 713px) {
+    body {
+        background-image: initial;
+        background-color: var(--colorBgDark);
+    }
+    .metawrap {
+        margin-top: 0;
+        max-width: initial;
+    }
+    .facewrap {
+        border-radius: initial;
+        box-shadow: initial;
+    }
+    .box {
+        border-radius: initial;
+        box-shadow: initial;
+    }
+    img#face {
+        margin: 1em 0;
+        width: 6em;
+    }
+    img#name {
+        bottom: 2em;
+        width: 20em;
+    }
+}
+@media only screen and (max-width: 678px) {
+    .box {padding: 1em 0 2em;}
+}
+@media only screen and (max-width: 565px) {
+    img#face {margin: 1em;}
+    img#name {display: none;}
+    .box {padding: 1em 0 1em;}
+    .box ul li {margin: 0 0.5em;}
+}
